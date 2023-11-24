@@ -15,6 +15,7 @@ body{
   div, header, section, article, nav, aside, footer,p,html,body,h1 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 `;
 

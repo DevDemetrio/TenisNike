@@ -8,6 +8,7 @@ function App() {
     <>
       <EstilosGlobais />
       <Header />
+
       <Banner
         backgroundImage={bannerBackground}
         title={"A melhor loja de Jordan"}

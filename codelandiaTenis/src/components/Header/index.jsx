@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
-const HeaderStyled = styled.header``;
+const HeaderStyled = styled.header`
+  background-color: #000;
+`;
 const DivStyledPromotion = styled.div`
   display: flex;
   justify-content: center;

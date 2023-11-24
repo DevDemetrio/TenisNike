@@ -1,25 +1,32 @@
 import { styled } from "styled-components";
 
 const BannerSection = styled.section`
-  background-image: ${(props) => `url(${props.$backgroundImage})`};
+  background-image: ${(props) =>
+    `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.$backgroundImage})`};
+
   background-repeat: no-repeat;
 
-  height: 300px;
+  background-size: cover;
+  padding-top: 120px;
+  background-size: 100%;
+  min-height: 377px;
+  margin: 0 auto;
 `;
 
 const BannerTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 12px;
   font-size: 1.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  color: rgba(249, 249, 249, 1);
 `;
 const BannerText = styled.p`
+  width: 350px;
+  margin: 0 auto;
   font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  line-height: 34px;
+  color: rgba(249, 249, 249, 1);
 `;
 const Banner = ({ backgroundImage, title, text }) => {
   return (
