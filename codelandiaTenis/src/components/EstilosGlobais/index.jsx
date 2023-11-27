@@ -17,6 +17,11 @@ body{
     padding: 0;
     box-sizing: border-box;
   }
+
+  img{
+    max-width: 100%;
+    display: block;
+  }
 `;
 
 export default EstilosGlobais;

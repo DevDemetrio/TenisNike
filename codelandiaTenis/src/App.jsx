@@ -7,6 +7,7 @@ import Highlights from "./components/highlights";
 import phonto from "./img.json";
 import Gallery from "./components/Gallery";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 const ContaineMain = styled.main``;
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Highlights />
         <Gallery photos={photoGallery} />
       </ContaineMain>
+      <Footer />
     </>
   );
 };
