@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import ButtonIcon from "../../ButtonIcon";
 const FigureStyle = styled.figure`
   width: 23.37rem;
   height: 18.87rem;
@@ -12,6 +12,10 @@ const FigureStyle = styled.figure`
   flex-direction: column;
 `;
 
+const FooterStyle = styled.footer`
+  background-color: aqua;
+`;
+
 const FigcationStyled = styled.figcaption``;
 const Imagem = ({ photo }) => {
   return (
@@ -21,6 +25,11 @@ const Imagem = ({ photo }) => {
       </div>
       <FigcationStyled>
         <h3>{photo.titulo}a</h3>
+        <FooterStyle>
+          <ButtonIcon>
+            <img src="../" alt="" />
+          </ButtonIcon>
+        </FooterStyle>
       </FigcationStyled>
     </FigureStyle>
   );
