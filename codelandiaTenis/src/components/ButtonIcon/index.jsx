@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
 const ButtonIcon = styled.button`
-  background-color: antiquewhite;
+  border: none;
+  background-color: transparent;
 `;
 
 export default ButtonIcon;
