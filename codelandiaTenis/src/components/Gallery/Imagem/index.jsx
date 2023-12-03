@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import ButtonIcon from "../../ButtonIcon";
 
 const FigureStyle = styled.figure`
+  width: ${(props) => (props.$expandida ? "90%" : "460px")};
   width: 23.37rem;
   height: 16.87rem;
   background-color: rgba(235, 233, 234, 1);
@@ -24,10 +25,10 @@ const FigcationContainer = styled.div`
   flex-direction: column;
 `;
 const FigcationStyled = styled.figcaption``;
-const Imagem = ({ photo }) => {
+const Imagem = ({ photo, expandida = false, requestedZoom }) => {
   return (
     <FigcationContainer>
-      <FigureStyle>
+      <FigureStyle $expandida={expandida}>
         <div>
           <img src={photo.path} alt={photo.fonte} />
         </div>
@@ -40,9 +41,14 @@ const Imagem = ({ photo }) => {
               </ButtonIcon>
             </div>
             <div>
-              <ButtonIcon>
-                <img src="icones/expandir.png" alt="" />
-              </ButtonIcon>
+              {!expandida && (
+                <ButtonIcon
+                  aria-hidden={expandida}
+                  onClick={() => requestedZoom(photo)}
+                >
+                  <img src="icones/expandir.png" alt="" />
+                </ButtonIcon>
+              )}
             </div>
           </FooterStyle>
         </FigcationStyled>

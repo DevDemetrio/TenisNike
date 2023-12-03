@@ -8,10 +8,12 @@ import phonto from "./img.json";
 import Gallery from "./components/Gallery";
 import { useState } from "react";
 import Footer from "./components/Footer";
+import ModalZoom from "./components/ModalZoom";
 
 const ContaineMain = styled.main``;
 const App = () => {
   const [photoGallery, setPhotoGallery] = useState(phonto);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
   return (
     <>
       <EstilosGlobais />
@@ -25,9 +27,13 @@ const App = () => {
           }
         />
         <Highlights />
-        <Gallery photos={photoGallery} />
+        <Gallery
+          thePhotoSelected={(photo) => setSelectedPhoto(photo)}
+          photos={photoGallery}
+        />
       </ContaineMain>
       <Footer />
+      <ModalZoom foto={selectedPhoto} />
     </>
   );
 };

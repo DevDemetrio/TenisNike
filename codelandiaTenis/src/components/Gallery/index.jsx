@@ -1,9 +1,9 @@
 import Imagem from "./Imagem";
-const Gallery = ({ photos = [] }) => {
+const Gallery = ({ photos = [], thePhotoSelected }) => {
   return (
     <>
       {photos.map((photo) => (
-        <Imagem key={photo.id} photo={photo} />
+        <Imagem requestedZoom={thePhotoSelected} key={photo.id} photo={photo} />
       ))}
     </>
   );
