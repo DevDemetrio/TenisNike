@@ -28,9 +28,10 @@ const FigcationStyled = styled.figcaption``;
 const Imagem = ({ photo, expandida = false, requestedZoom }) => {
   return (
     <FigcationContainer>
-      <FigureStyle $expandida={expandida}>
+      <FigureStyle $expandida={expandida} id={`photo-${photo.id}`}>
         <div>
           <img src={photo.path} alt={photo.fonte} />
+          <li>{photo.path}</li>
         </div>
         <h3>{photo.titulo}</h3>
         <FigcationStyled>

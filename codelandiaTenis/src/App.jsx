@@ -33,7 +33,7 @@ const App = () => {
         />
       </ContaineMain>
       <Footer />
-      <ModalZoom foto={selectedPhoto} />
+      <ModalZoom photo={selectedPhoto} />
     </>
   );
 };

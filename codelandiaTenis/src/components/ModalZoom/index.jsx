@@ -1,11 +1,11 @@
 import Imagem from "../Gallery/Imagem";
 
-const ModalZoom = ({ foto }) => {
+const ModalZoom = ({ photo }) => {
   return (
     <>
-      {foto && (
-        <dialog open={!!foto}>
-          <Imagem foto={foto} expandida={true} />
+      {photo && (
+        <dialog open={!!photo}>
+          <Imagem photo={photo} expandida={true} />
           <p>Olá para todos!</p>
           <form action="dialog">
             <button>Ok</button>
