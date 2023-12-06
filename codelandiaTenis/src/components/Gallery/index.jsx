@@ -1,9 +1,14 @@
 import Imagem from "./Imagem";
-const Gallery = ({ photos = [], thePhotoSelected }) => {
+const Gallery = ({ photos = [], thePhotoSelected, toggleFavorite }) => {
   return (
     <>
       {photos.map((photo) => (
-        <Imagem requestedZoom={thePhotoSelected} key={photo.id} photo={photo} />
+        <Imagem
+          requestedZoom={thePhotoSelected}
+          toggleFavorite={toggleFavorite}
+          key={photo.id}
+          photo={photo}
+        />
       ))}
     </>
   );

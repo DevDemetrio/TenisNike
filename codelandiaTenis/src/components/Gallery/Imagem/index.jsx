@@ -25,7 +25,15 @@ const FigcationContainer = styled.div`
   flex-direction: column;
 `;
 const FigcationStyled = styled.figcaption``;
-const Imagem = ({ photo, expandida = false, requestedZoom }) => {
+const Imagem = ({
+  photo,
+  expandida = false,
+  requestedZoom,
+  toggleFavorite,
+}) => {
+  const iconFavorite = photo.favorite
+    ? "/icones/favorito-ativo.png"
+    : "/icones/favorito.png";
   return (
     <FigcationContainer>
       <FigureStyle $expandida={expandida} id={`photo-${photo.id}`}>
@@ -37,8 +45,8 @@ const Imagem = ({ photo, expandida = false, requestedZoom }) => {
         <FigcationStyled>
           <FooterStyle>
             <div>
-              <ButtonIcon>
-                <img src="icones/favorito-ativo.png" alt="" />
+              <ButtonIcon onClick={(photo) => toggleFavorite(photo)}>
+                <img src={iconFavorite} alt="" />
               </ButtonIcon>
             </div>
             <div>

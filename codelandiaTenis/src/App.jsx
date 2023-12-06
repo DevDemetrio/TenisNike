@@ -14,6 +14,18 @@ const ContaineMain = styled.main``;
 const App = () => {
   const [photoGallery, setPhotoGallery] = useState(phonto);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  const toggleFavorite = (photo) => {
+    setSelectedPhoto(
+      phonto.map((photoGallery) => {
+        return {
+          ...photoGallery,
+          favorite:
+            photoGallery.id === photo.id ? !photo.favorite : photo.favorite,
+        };
+      })
+    );
+  };
   return (
     <>
       <EstilosGlobais />
@@ -29,6 +41,7 @@ const App = () => {
         <Highlights />
         <Gallery
           thePhotoSelected={(photo) => setSelectedPhoto(photo)}
+          toggleFavorite={toggleFavorite}
           photos={photoGallery}
         />
       </ContaineMain>
