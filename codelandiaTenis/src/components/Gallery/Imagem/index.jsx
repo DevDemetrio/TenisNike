@@ -45,7 +45,7 @@ const Imagem = ({
         <FigcationStyled>
           <FooterStyle>
             <div>
-              <ButtonIcon onClick={(photo) => toggleFavorite(photo)}>
+              <ButtonIcon onClick={() => toggleFavorite(photo)}>
                 <img src={iconFavorite} alt="" />
               </ButtonIcon>
             </div>

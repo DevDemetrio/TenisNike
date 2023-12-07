@@ -16,12 +16,20 @@ const App = () => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const toggleFavorite = (photo) => {
-    setSelectedPhoto(
-      phonto.map((photoGallery) => {
+    if (photo.id === selectedPhoto?.id) {
+      setSelectedPhoto({
+        ...selectedPhoto,
+        favorite: !selectedPhoto.favorite,
+      });
+    }
+    setPhotoGallery(
+      photoGallery.map((photoGallery) => {
         return {
           ...photoGallery,
           favorite:
-            photoGallery.id === photo.id ? !photo.favorite : photo.favorite,
+            photoGallery.id === photo.id
+              ? !photo.favorite
+              : photoGallery.favorite,
         };
       })
     );
@@ -46,7 +54,11 @@ const App = () => {
         />
       </ContaineMain>
       <Footer />
-      <ModalZoom photo={selectedPhoto} />
+      <ModalZoom
+        photo={selectedPhoto}
+        toggleFavorite={toggleFavorite}
+        theClose={() => setSelectedPhoto(null)}
+      />
     </>
   );
 };
