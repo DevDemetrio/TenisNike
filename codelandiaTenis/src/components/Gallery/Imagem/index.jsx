@@ -7,6 +7,13 @@ const FigureStyle = styled.figure`
   height: 16.87rem;
   background-color: rgba(235, 233, 234, 1);
   margin: 3.68rem auto 1.875rem auto;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const FooterStyle = styled.footer`
@@ -25,6 +32,7 @@ const FigcationContainer = styled.div`
   flex-direction: column;
 `;
 const FigcationStyled = styled.figcaption``;
+
 const Imagem = ({
   photo,
   expandida = false,
@@ -38,10 +46,11 @@ const Imagem = ({
     <FigcationContainer>
       <FigureStyle $expandida={expandida} id={`photo-${photo.id}`}>
         <div>
-          <img src={photo.path} alt={photo.fonte} />
-          <li>{photo.path}</li>
+          <div>
+            <img src={photo.path} alt={photo.fonte} />
+          </div>
+          <h3>{photo.titulo}</h3>
         </div>
-        <h3>{photo.titulo}</h3>
         <FigcationStyled>
           <FooterStyle>
             <div>
