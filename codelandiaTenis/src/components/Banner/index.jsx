@@ -9,10 +9,22 @@ const BannerSection = styled.section`
   padding-top: 120px;
   background-size: 100%;
   min-height: 377px;
+
+  @media (min-width: 1070px) {
+    background-image: ${(props) =>
+      `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props.$desktopBackground})`};
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
 const TextContainer = styled.div`
   margin: 0 auto;
+
+  @media (min-width: 1070px) {
+    margin-left: 60px;
+    text-align: left;
+  }
 `;
 
 const BannerTitle = styled.h1`
@@ -29,9 +41,12 @@ const BannerText = styled.p`
   color: rgba(249, 249, 249, 1);
 `;
 
-const Banner = ({ backgroundImage, title, text }) => {
+const Banner = ({ backgroundImage, title, text, desktopBackground }) => {
   return (
-    <BannerSection $backgroundImage={backgroundImage}>
+    <BannerSection
+      $backgroundImage={backgroundImage}
+      $desktopBackground={desktopBackground}
+    >
       <TextContainer>
         <BannerTitle>{title}</BannerTitle>
         <BannerText>{text}</BannerText>
