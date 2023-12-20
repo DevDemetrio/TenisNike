@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const HignlightsContainer = styled.section`
-  margin: 3.125rem auto 0 auto;
+  margin: 6.125rem auto 0 auto;
   div {
     text-align: center;
     width: 22.3125rem;
@@ -12,6 +12,17 @@ const HignlightsContainer = styled.section`
     padding: 0 0.625rem;
     line-height: 1.75rem;
     font-weight: 500;
+  }
+  @media (min-width: 1030px) {
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+      padding: 0 0.625rem;
+      line-height: 1.75rem;
+      font-weight: 500;
+    }
   }
 `;
 const Highlights = () => {

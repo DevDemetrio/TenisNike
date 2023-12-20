@@ -7,7 +7,6 @@ const FigureStyle = styled.figure`
   height: 16.87rem;
   background-color: rgba(235, 233, 234, 1);
   margin: 3.68rem auto 1.875rem auto;
-
   div {
     display: flex;
     flex-direction: column;
@@ -27,11 +26,13 @@ const FooterStyle = styled.footer`
   align-items: center;
 `;
 
-const FigcationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 const FigcationStyled = styled.figcaption``;
+
+const FigcationContainer = styled.div`
+  margin: 0 auto;
+`;
+
+const ContanteTenis = styled.div``;
 
 const Imagem = ({
   photo,
@@ -45,12 +46,12 @@ const Imagem = ({
   return (
     <FigcationContainer>
       <FigureStyle $expandida={expandida} id={`photo-${photo.id}`}>
-        <div>
+        <ContanteTenis>
           <div>
             <img src={photo.path} alt={photo.fonte} />
           </div>
           <h3>{photo.titulo}</h3>
-        </div>
+        </ContanteTenis>
         <FigcationStyled>
           <FooterStyle>
             <div>

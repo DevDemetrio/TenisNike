@@ -20,18 +20,20 @@ const BannerSection = styled.section`
 
 const TextContainer = styled.div`
   margin: 0 auto;
-
   @media (min-width: 1070px) {
-    margin-left: 60px;
+    margin-left: 120px;
     text-align: left;
   }
 `;
 
 const BannerTitle = styled.h1`
   margin-bottom: 12px;
-
   font-size: 1.75rem;
   color: rgba(249, 249, 249, 1);
+
+  @media (min-width: 1300px) {
+    font-size: 2rem;
+  }
 `;
 const BannerText = styled.p`
   width: 357px;
@@ -39,6 +41,10 @@ const BannerText = styled.p`
   font-weight: 600;
   line-height: 28px;
   color: rgba(249, 249, 249, 1);
+
+  @media (min-width: 1300px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Banner = ({ backgroundImage, title, text, desktopBackground }) => {

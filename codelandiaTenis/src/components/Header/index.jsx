@@ -11,6 +11,10 @@ const DivStyledPromotion = styled.div`
   height: 3.75rem;
   font-size: 1rem;
   background-color: #00aeff;
+
+  @media (min-width: 1030px) {
+    font-size: 1.3rem;
+  }
 `;
 const DivName = styled.div`
   display: flex;
@@ -21,6 +25,10 @@ const DivName = styled.div`
   font-size: 1.5rem;
   background-color: #f9f9f9;
   text-align: center;
+
+  @media (min-width: 1030px) {
+    font-size: 2rem;
+  }
 `;
 
 const Header = () => {

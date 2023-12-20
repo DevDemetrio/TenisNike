@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import ModalZoom from "./components/ModalZoom";
 
 const ContaineMain = styled.main``;
+
 const App = () => {
   const [photoGallery, setPhotoGallery] = useState(phonto);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
