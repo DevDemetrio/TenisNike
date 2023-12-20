@@ -18,7 +18,7 @@ const Teste = styled.div`
     gap: 32px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1301px;
   }
 `;
 const Gallery = ({ photos = [], thePhotoSelected, toggleFavorite }) => {
